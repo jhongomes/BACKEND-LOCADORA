@@ -1,8 +1,8 @@
 import  { Router } from 'express';
-import { CreateCategoryService } from '../services/CreateCategoryService';
+import { CreateCategoryService } from '../modules/cars/services/CreateCategoryService';
 
 
-import { CategoriesRepository} from '../repositories/CategoriesRepository';
+import { CategoriesRepository} from '../modules/cars/repositories/CategoriesRepository';
 import { v4 as uuidv4} from 'uuid';
 
 const categoriesRoutes  = Router();
