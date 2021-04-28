@@ -2,7 +2,7 @@ import  { Router } from 'express';
 import { CreateCategoryUseCase } from '../modules/cars/useCasses/createCategory/CreateCategoryUseCase';
 
 
-import { CategoriesRepository} from '../modules/cars/repositories/CategoriesRepository';
+import { CategoriesRepository} from '../modules/cars/repositories/implementations/CategoriesRepository';
 
 
 import { createCategoryController } from '../modules/cars/useCasses/createCategory';
@@ -11,7 +11,7 @@ import { listCategoriesController } from "../modules/cars/useCasses/ListCategori
 
 
 const categoriesRoutes  = Router();
-const categoriesRepository = new CategoriesRepository();
+const categoriesRepository = new CategoriesRepository;
 
 
 
