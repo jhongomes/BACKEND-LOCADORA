@@ -11,7 +11,6 @@ import { listCategoriesController } from "../modules/cars/useCasses/ListCategori
 
 
 const categoriesRoutes  = Router();
-const categoriesRepository = new CategoriesRepository;
 
 
 
