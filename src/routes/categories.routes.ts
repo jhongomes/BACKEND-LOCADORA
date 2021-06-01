@@ -9,6 +9,7 @@ import { CategoriesRepository} from '../modules/cars/repositories/implementation
 import { createCategoryController } from '../modules/cars/useCasses/createCategory';
 
 import { listCategoriesController } from "../modules/cars/useCasses/ListCategories";
+import { importCategoryController} from "../modules/cars/useCasses/importCategory";
 
 
 const categoriesRoutes  = Router();
@@ -28,10 +29,7 @@ categoriesRoutes.get("/", (request, response)=> {
 })
 
 categoriesRoutes.post("/import", upload.single("file"), (request, response) => {
-    const { file } = request;
-    console.log(file);
-
-    return response.send()
+  return importCategoryController.handle(request, response);  
 })
 
 export { categoriesRoutes };
