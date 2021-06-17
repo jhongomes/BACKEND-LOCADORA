@@ -1,5 +1,5 @@
 
-import { Category } from "../../models/category";
+import { Category } from "../../entities/category";
 import { ICategoriesRepository} from "../../repositories/ICategoriesRepository";
 
 
