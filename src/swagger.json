@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.3",
     "info": {
-        "title": "Rental Documentation",
+        "title": "Locadora Documentation",
         "description": "This in an api ",
         "version": "1.0.0",
         "contact": {
@@ -77,6 +77,105 @@
     
             }
         }
+    },
+    "/categories/import": {
+      "post":{
+        "tags":["Category"],
+        "summary":"upload a new category",
+        "description": "uploado a new category",
+        "requestBody":{
+          "content":{
+            "multipart/form-data":{
+              "schema": {
+                "type":"object",
+                "properties":{
+                  "file": {
+                    "type":"string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          
+        }
+      },
+      "responses":{
+        "201": {
+          "description": "Created"
+        }
+      }
+      }
+    },
+    "/specifications":{
+      "post": {
+        "tags":["Specifications"],
+        "summary": "Create a specification",
+        "description": "Create a new specification",
+        "requestBody":{
+          "content":{
+            "application/json":{
+              "schema":{
+                "$ref": "#/definitions/Specification"
+              }
+            }
+          }
+        },
+        "responses":{
+          "201": {
+            "description": "Created"
+          },
+          "500":{
+            "description": "Specification already exists!"
+          }
+        }
+      },
+      "get":{
+      "tags": ["Specifications"],
+        "sumary": "List all specification",
+        "description": "list all specification",
+        "responses":{
+          "200":{
+            "description": "Sucess",
+            "content":{
+              "aplication/json":{
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name":{
+                        "type": "string"
+                      },
+                      "description":{
+                        "type": "string"
+                      }
+                    }
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+  
+      }
+  
+    }
+   
+  },
+
+  "definitions": {
+    "Specification": {
+      "type": "object",
+      "properties":{
+        "name": {
+          "type":"string"
+        },
+        "description":{
+          "type":"string"
+        }
+      }
     }
   }
+    
 }
