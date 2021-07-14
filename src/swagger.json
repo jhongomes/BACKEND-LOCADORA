@@ -55,7 +55,7 @@
                 "200":{
                   "description": "Sucess",
                   "content":{
-                    "aplication/json":{
+                    "application/json":{
                       "schema": {
                         "type": "array",
                         "items": {
