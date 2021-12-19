@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner, Table} from "typeorm";
+import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
 export class CreateSpecification1625962472806 implements MigrationInterface {
 
@@ -11,7 +11,6 @@ export class CreateSpecification1625962472806 implements MigrationInterface {
                         name: 'id',
                         type: 'uuid',
                         isPrimary: true
-
                     },
                     {
                         name: 'name',

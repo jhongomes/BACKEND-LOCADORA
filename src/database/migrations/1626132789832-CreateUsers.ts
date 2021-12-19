@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner, Table} from "typeorm";
+import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
 export class CreateUsers1626132789832 implements MigrationInterface {
 
@@ -27,7 +27,7 @@ export class CreateUsers1626132789832 implements MigrationInterface {
                     {
                         name: 'email',
                         type: 'varchar'
-                    }, 
+                    },
                     {
                         name: 'driver_license',
                         type: 'varchar'
