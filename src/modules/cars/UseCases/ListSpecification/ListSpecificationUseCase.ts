@@ -1,5 +1,5 @@
 import { inject, injectable } from "tsyringe";
-import { Specification } from "../../entities/Specification";
+import { Specification } from "../../infra/entities/Specification";
 import { ISpecificationRepository } from "../../repositories/ISpecificationRepository";
 
 @injectable()

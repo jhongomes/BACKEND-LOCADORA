@@ -1,4 +1,4 @@
-import { Category } from "../../entities/category";
+import { Category } from "../../infra/entities/category";
 import { ICategoriesRepository, ICreateCategoryDTO } from "../ICategoriesRepository";
 
 class CategoryReposipositoryInMemory implements ICategoriesRepository {
