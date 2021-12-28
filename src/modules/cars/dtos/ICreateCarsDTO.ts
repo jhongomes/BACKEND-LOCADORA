@@ -1,3 +1,4 @@
+import { Specification } from "../infra/entities/Specification";
 
 interface ICreateCarsDTO {
     id?: string;
@@ -8,5 +9,6 @@ interface ICreateCarsDTO {
     fine_amount: number;
     brand: string;
     category_id: string;
+    specifications?: Specification[];
 }
 export { ICreateCarsDTO }
