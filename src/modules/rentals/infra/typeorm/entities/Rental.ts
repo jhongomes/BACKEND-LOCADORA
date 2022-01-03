@@ -15,10 +15,6 @@ class Rental {
     @Column()
     car_id: string;
 
-    @ManyToOne(() => User)
-    @JoinColumn({ name: "user_id" })
-    user: User;
-
     @Column()
     user_id: string;
 
