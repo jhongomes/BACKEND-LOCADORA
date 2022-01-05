@@ -19,17 +19,17 @@ class SendForgotPasswordMailUseCase {
         @inject("EtherealMailProvider")
         private mailProvider: IMailProvider) { }
 
-    async execute(email: string) {
+    async execute(email: string): Promise<void> {
         const user = await this.usersRepository.findByEmail(email);
 
-        const templatePath = resolve
-            (__dirname,
-                "..",
-                "..",
-                "views",
-                "emails",
-                "forgotPassword.hbs"
-            )
+        const templatePath = resolve(
+            __dirname,
+            "..",
+            "..",
+            "views",
+            "emails",
+            "forgotPassword.hbs"
+        )
 
         if (!user) {
             throw new AppError("user does not exists!")
